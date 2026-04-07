@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-sans: "Manrope", sans-serif;
+
+  --color-surface: #fef9ed;
+  --color-surface-container: #f3ede2;
+  --color-surface-container-low: #f9f3e8;
+  --color-surface-container-high: #ede8dc;
+  --color-surface-container-highest: #e7e2d7;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-primary: #455d5b;
+  --color-primary-container: #5d7673;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #5b614e;
+  --color-secondary-container: #dfe5cd;
+  --color-on-secondary-container: #616754;
+  
+  --color-tertiary: #3e5d67;
+  --color-on-surface: #1d1c15;
+  --color-on-surface-variant: #424847;
+  --color-outline-variant: #c1c8c6;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+.limestone-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.editorial-scale {
+  letter-spacing: -0.02em;
+}

@@ -1,0 +1,56 @@
+import { motion } from 'motion/react';
+
+export default function Hero() {
+  return (
+    <section className="relative h-[85vh] min-h-[600px] flex items-end px-6 pb-24 overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <motion.img 
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="w-full h-full object-cover grayscale-[20%] brightness-[85%]" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlWBYokUQkM34mRUNiNrse_Va-PawzGeRFajEFNSegMFfgXn0OPnRXyw9OCFdNSeuqg3aKzIoQnfaST6MUn9Xbitxvq6NoWAosipqv3Zio5hNv9s4kEMkXJbFZgphzO1B3shd0SBoeAm1nhfPf8HJ786x2tlnKXP1DR97J119HYkxRBl-z1ZdRZVL9j7uKieSo1z484VUdef4guEhajhV1_5SQdN4dH8ru7_c-Orfeay734KzSXO_uQRDte2uk_6lvIzK-YTf3W-_1"
+          alt="Luxury infinity pool at sunset"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/20 to-transparent"></div>
+      </div>
+      
+      <div className="relative z-10 w-full max-w-screen-xl mx-auto">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="text-secondary-container text-xs font-bold tracking-[0.4em] uppercase mb-6"
+        >
+          Structural Excellence
+        </motion.p>
+        
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="font-headline text-5xl md:text-8xl text-white leading-[1.1] mb-8 editorial-scale max-w-4xl"
+        >
+          Remodeling Your North Texas <span className="italic font-normal">Sanctuary.</span>
+        </motion.h1>
+        
+        <motion.div 
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="h-px w-32 bg-tertiary mb-8 origin-left"
+        />
+        
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="text-surface-container-highest text-lg md:text-xl max-w-lg leading-relaxed font-light"
+        >
+          Architectural precision meets the rugged elegance of the Fort Worth landscape.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
