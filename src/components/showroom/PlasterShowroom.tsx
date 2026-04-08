@@ -44,6 +44,8 @@ const plasterFinishes = [
   }
 ];
 
+const BRAND_LABEL = "Noble Tile · Designer Series Pebble";
+
 export default function PlasterShowroom() {
   const [selected, setSelected] = useState(plasterFinishes[0]);
 
@@ -51,7 +53,7 @@ export default function PlasterShowroom() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
       <div className="space-y-12">
         <div className="max-w-md">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-3">Noble Tile · Designer Series Pebble</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-3">{BRAND_LABEL}</p>
           <h2 className="font-headline text-3xl mb-4">Plaster & Finish</h2>
           <p className="text-on-surface-variant leading-relaxed">
             The finish determines the color of your water and the texture of your pool's surface. Select a shade to see how it transforms your design.
@@ -59,9 +61,9 @@ export default function PlasterShowroom() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {plasterFinishes.map((finish, index) => (
+          {plasterFinishes.map((finish) => (
             <button
-              key={index}
+              key={finish.name}
               onClick={() => setSelected(finish)}
               className={`group relative aspect-square transition-all duration-300 overflow-hidden ${
                 selected.name === finish.name
@@ -87,29 +89,28 @@ export default function PlasterShowroom() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.25 }}
             className="sticky top-40 bg-surface-container p-12 md:p-16 shadow-2xl overflow-hidden"
           >
-            <div className="relative z-10">
-              <div className="aspect-video w-full overflow-hidden shadow-2xl mb-10">
-                <img
-                  src={selected.img}
-                  alt={selected.name}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
-
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-2">
-                Noble Tile · Designer Series Pebble
-              </p>
-              <h3 className="font-headline text-4xl mb-6">{selected.name}</h3>
-              <p className="text-on-surface-variant text-lg leading-relaxed mb-12">
-                {selected.description}
-              </p>
-
-              <button className="w-full border border-primary text-primary py-4 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-primary hover:text-on-primary transition-all">
-                Order Sample Kit
-              </button>
+            <div className="aspect-video w-full overflow-hidden shadow-2xl mb-10">
+              <img
+                src={selected.img}
+                alt={selected.name}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
             </div>
+
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-2">
+              {BRAND_LABEL}
+            </p>
+            <h3 className="font-headline text-4xl mb-6">{selected.name}</h3>
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-12">
+              {selected.description}
+            </p>
+
+            <button type="button" className="w-full border border-primary text-primary py-4 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-primary hover:text-on-primary transition-all">
+              Order Sample Kit
+            </button>
           </motion.div>
         </AnimatePresence>
       </div>
