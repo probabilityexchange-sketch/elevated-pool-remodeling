@@ -150,6 +150,18 @@ export default function ContactForm() {
                     </div>
                   </div>
                   
+                  <div className="space-y-4">
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Services Needed (Remodeling Only)</label>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      {['Tile', 'Plaster', 'Decking', 'Equipment', 'Coping', 'Full Remodel'].map((service) => (
+                        <label key={service} className="flex items-center gap-3 p-3 bg-surface-container-low cursor-pointer hover:bg-tertiary/5 transition-colors group">
+                          <input type="checkbox" name="service" className="w-4 h-4 border-none text-primary focus:ring-primary/20" />
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant group-hover:text-primary transition-colors">{service}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Phone Number</label>
                     <input 

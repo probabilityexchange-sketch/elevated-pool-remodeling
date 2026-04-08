@@ -35,8 +35,11 @@ export default function Portfolio() {
               viewport={{ once: true }}
               className="font-headline text-4xl md:text-5xl text-on-surface editorial-scale"
             >
-              Recent Architectural Projects
+              Remodeling <span className="italic font-normal text-primary">Transformed.</span>
             </motion.h2>
+            <p className="mt-6 text-on-surface-variant leading-relaxed">
+              We take existing structures and breathe new life into them with premium materials and structural precision.
+            </p>
           </div>
           <span className="text-on-surface-variant text-xs font-bold tracking-widest uppercase">
             Fort Worth & Surrounding Areas

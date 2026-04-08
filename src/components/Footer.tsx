@@ -1,4 +1,5 @@
 import { Waves } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -21,9 +22,9 @@ export default function Footer() {
             <div>
               <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface mb-6">Explore</h4>
               <ul className="space-y-4">
-                {['Portfolio', 'Process', 'Philosophy', 'Reviews', 'FAQ'].map(item => (
+                {['Portfolio', 'Process', 'Reviews', 'FAQ'].map(item => (
                   <li key={item}>
-                    <a href={`#${item.toLowerCase()}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
+                    <a href={item === 'FAQ' ? '#faq' : `/#${item.toLowerCase()}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
                       {item}
                     </a>
                   </li>
@@ -32,11 +33,19 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface mb-6">Services</h4>
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface mb-6">Showroom</h4>
               <ul className="space-y-4">
-                {['Pool Resurfacing', 'Structural Repair', 'Masonry & Stone', 'Luxury Tiling', 'Water Features'].map(item => (
-                  <li key={item} className="text-sm text-on-surface-variant">
-                    {item}
+                {[
+                  { name: 'Pool Tile', path: '/showroom/tile' },
+                  { name: 'Pool Plaster', path: '/showroom/plaster' },
+                  { name: 'Pool Decking', path: '/showroom/decking' },
+                  { name: 'Pool Equipment', path: '/showroom/equipment' },
+                  { name: 'Pool Coping', path: '/showroom/coping' },
+                ].map(item => (
+                  <li key={item.name}>
+                    <Link to={item.path} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
