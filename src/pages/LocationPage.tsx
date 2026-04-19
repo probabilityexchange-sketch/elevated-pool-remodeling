@@ -12,6 +12,14 @@ import { getLocationBySlug, getRelatedLocations, Location } from '../data/locati
 import { MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+function formatHomeValue(value: number) {
+  if (value >= 1_000_000) {
+    return `$${(value / 1_000_000).toFixed(1)}M`;
+  }
+
+  return `$${Math.round(value / 1_000)}K`;
+}
+
 function LocationHero({ location }: { location: Location }) {
   return (
     <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 bg-gradient-to-b from-primary/5 to-surface">
@@ -56,9 +64,9 @@ function LocationStats({ location }: { location: Location }) {
           </div>
           <div className="text-center">
             <p className="text-4xl font-bold text-primary mb-2">
-              ${(location.medianHomeValue / 100000).toFixed(1)}M
+              {formatHomeValue(location.medianHomeValue)}
             </p>
-            <p className="text-sm text-on-surface-variant">Median Home Value</p>
+            <p className="text-sm text-on-surface-variant">Owner-Occupied Home Value</p>
           </div>
           <div className="text-center">
             <p className="text-4xl font-bold text-primary mb-2">
