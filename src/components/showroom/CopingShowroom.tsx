@@ -6,7 +6,7 @@ const copingStyles = [
   {
     name: "Bullnose Coping",
     description: "The timeless standard with a smooth, 180-degree rounded edge. Designed for comfort, safety, and a soft architectural transition between the pool and the deck.",
-    sampleImg: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80",
+    sampleImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80",
     installedImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
     profile: "Rounded Radius",
     depth: "2.5 inches"
@@ -14,15 +14,15 @@ const copingStyles = [
   {
     name: "Modern Square Edge",
     description: "A sharp, sophisticated profile with clean 90-degree lines. This cantilevered design creates a modern frame for the pool water, perfect for contemporary architecture.",
-    sampleImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80",
-    installedImg: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    sampleImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=400&q=80",
+    installedImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80",
     profile: "Cantilevered Square",
     depth: "3 inches"
   },
   {
     name: "Natural Flagstone",
     description: "Hand-selected irregular stone edges that follow the natural topography of the rock. This pond-style edge is ideal for rustic, organic backyard sanctuaries.",
-    sampleImg: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80",
+    sampleImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80",
     installedImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80",
     profile: "Natural Cleft Edge",
     depth: "Variable"

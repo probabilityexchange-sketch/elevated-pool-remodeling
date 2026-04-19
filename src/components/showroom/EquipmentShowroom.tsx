@@ -110,26 +110,14 @@ export default function EquipmentShowroom() {
                 {selected.description}
               </p>
 
-              <div className="grid grid-cols-2 gap-6 mb-10">
-                <div className="space-y-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Product</p>
-                  <div className="aspect-square overflow-hidden shadow-lg">
-                    <img
-                      src={selected.productImg}
-                      alt={selected.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Installed</p>
-                  <div className="aspect-square overflow-hidden shadow-lg group">
-                    <img
-                      src={selected.installedImg}
-                      alt="Installed"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
+              <div className="space-y-3 mb-10">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Equipment</p>
+                <div className="aspect-[4/3] overflow-hidden shadow-lg group bg-white">
+                  <img
+                    src={selected.productImg}
+                    alt={selected.name}
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
               </div>
 

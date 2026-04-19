@@ -117,13 +117,13 @@ export default function DeckingShowroom() {
           >
             <div className="bg-surface-container p-8 shadow-2xl border border-outline-variant/10">
               <div className="flex items-center justify-between mb-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Installed Environment</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Material Surface</p>
                 <Shield className="text-primary/20" size={24} />
               </div>
               <div className="aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group">
                 <img
-                  src={selected.installedImg}
-                  alt="Installed"
+                  src={selected.sampleImg}
+                  alt={`${selected.name} decking material`}
                   className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function DeckingShowroom() {
               <div className="w-full md:w-48 h-48 shrink-0 relative">
                 <img
                   src={selected.sampleImg}
-                  alt="Product Sample"
+                  alt={`${selected.name} sample`}
                   className="w-full h-full object-cover shadow-2xl ring-1 ring-white/10"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
