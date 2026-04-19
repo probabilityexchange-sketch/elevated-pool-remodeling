@@ -10,7 +10,6 @@ const equipmentOptions = [
     name: "IntelliFlo3 VSF",
     description: "The IntelliFlo3 VSF is the gold standard of pool energy efficiency. By running at exactly the speed your pool needs, it cuts energy consumption by up to 90% compared to traditional single-speed pumps — while operating nearly silently.",
     productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/pumps/intelliflo3-vsf/if3---pdp/images-/if3-pdp-thumbnail-2hps.jpg",
-    installedImg: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
     features: ["IntelliFlo3 VSF Technology", "WhisperQuiet Operation", "Energy Star Certified", "Remote Speed Control"],
     metric: { label: "Max Energy Savings", value: "90%", sublabel: "vs. single-speed pumps", max: 90 }
   },
@@ -21,7 +20,6 @@ const equipmentOptions = [
     name: "MasterTemp 400K BTU",
     description: "The MasterTemp is engineered for rapid heat recovery — bringing a 20,000-gallon pool up to temperature in a fraction of the time of competing units. Low NOx certified and designed to operate efficiently even in low-ambient temperature conditions.",
     productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/heaters/mastertemp/mastertemp-images/MasterTemp-banner.png",
-    installedImg: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?auto=format&fit=crop&w=800&q=80",
     features: ["400,000 BTU Output", "Low NOx Certified", "Digital Temperature Control", "Compact Footprint"],
     metric: { label: "Heat Output", value: "400K", sublabel: "BTU, rapid recovery rate", max: 500 }
   },
@@ -32,7 +30,6 @@ const equipmentOptions = [
     name: "IntelliChlor SC40",
     description: "Convert ordinary pool salt into pure, fresh chlorine — no harsh chemical handling, no red eyes, no bleached swimwear. The IntelliChlor SC40 self-cleaning cell produces 40 lbs of chlorine per cycle and monitors its own health automatically.",
     productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-images/intellichlor-product-image.png",
-    installedImg: "https://images.unsplash.com/photo-1545041361-95aef049c3b6?auto=format&fit=crop&w=800&q=80",
     features: ["Self-Cleaning Titanium Cell", "40 lbs Chlorine/Cycle", "Automated pH Monitoring", "Salt Level Detection"],
     metric: { label: "Chlorine Output", value: "40", sublabel: "lbs per cycle, self-cleaning", max: 50 }
   },
@@ -43,7 +40,6 @@ const equipmentOptions = [
     name: "IntelliCenter Control",
     description: "One app controls everything — temperature, lighting, water features, sanitation schedules, and energy settings. IntelliCenter integrates with every Pentair device and supports voice commands through Alexa and Google Home.",
     productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/automation/intellicenter/intellicenter-pdp/Pentair-IntelliCenter-PDP-Images-Intro%20Image.png",
-    installedImg: "https://images.unsplash.com/photo-1558002038-1ad5c2eeef6e?auto=format&fit=crop&w=800&q=80",
     features: ["Full Mobile App Control", "Voice Command Ready", "Energy Usage Dashboard", "Programmable Schedules"],
     metric: { label: "Controllable Features", value: "10+", sublabel: "lights, heat, features, schedules", max: 10 }
   }

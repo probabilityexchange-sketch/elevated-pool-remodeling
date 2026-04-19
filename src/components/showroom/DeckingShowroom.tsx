@@ -11,7 +11,7 @@ const deckingOptions = [
     hex: "#EAE0D5",
     description: "Premium ivory travertine in a classic 12\"×24\" paver format. Known for its natural cool-touch properties, Light Ivory remains walkable even in 100°F+ Texas heat while delivering a timeless resort aesthetic.",
     sampleImg: "https://media.heritageplus.com/image/upload/v1737570760/www/NobleTile/TKTCLIPV_24_X24_717a070b5c.jpg",
-    installedImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+    installedImg: "https://images.pexels.com/photos/17568095/pexels-photo-17568095.jpeg?cs=srgb&dl=pexels-vince-17568095.jpg&fm=jpg",
     thermal: "Low Heat Absorption",
     finish: "Tumbled / Non-Slip"
   },
@@ -21,7 +21,7 @@ const deckingOptions = [
     hex: "#B8B4AD",
     description: "A cool-toned silver travertine that pairs beautifully with contemporary architecture and dark-framed pools. The subtle grey undertones complement modern outdoor living spaces and stainless steel accents.",
     sampleImg: "https://media.heritageplus.com/image/upload/v1733791208/www/NobleTile/Silver_12x24_Paver_b8323c1103.jpg",
-    installedImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80",
+    installedImg: "https://images.pexels.com/photos/24805050/pexels-photo-24805050.jpeg?cs=srgb&dl=pexels-ahmetcotur-24805050.jpg&fm=jpg",
     thermal: "Low Heat Absorption",
     finish: "Honed / Non-Slip"
   },
@@ -31,7 +31,7 @@ const deckingOptions = [
     hex: "#A8A29E",
     description: "High-density porcelain engineered specifically for pool and spa installations. Pearl Gray's precision micro-texture provides exceptional slip resistance while its consistent color flow creates a seamless, architectural surround.",
     sampleImg: "https://media.heritageplus.com/image/upload/v1733791730/www/NobleTile/Pearl_Gray_Install_3dae5f658b.jpg",
-    installedImg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    installedImg: "https://images.pexels.com/photos/8577643/pexels-photo-8577643.jpeg?cs=srgb&dl=pexels-chester-dave-2674506-8577643.jpg&fm=jpg",
     thermal: "Consistent Performance",
     finish: "Micro-Textured"
   },
@@ -41,7 +41,7 @@ const deckingOptions = [
     hex: "#C8B99A",
     description: "One of the hardest natural stones available, Noble Tile quartzite offers extraordinary durability and natural variation. Each slab is unique — iron-rich veining creates a one-of-a-kind backyard that only gets more beautiful over time.",
     sampleImg: "https://media.heritageplus.com/image/upload/v1734990185/www/NobleTile/quartzite_sm_e664abf2fc.jpg",
-    installedImg: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80",
+    installedImg: "https://images.pexels.com/photos/15266426/pexels-photo-15266426.jpeg?cs=srgb&dl=pexels-rafael-quaty-37077235-15266426.jpg&fm=jpg",
     thermal: "Moderate Heat Absorption",
     finish: "Natural Cleft"
   }
@@ -117,13 +117,13 @@ export default function DeckingShowroom() {
           >
             <div className="bg-surface-container p-8 shadow-2xl border border-outline-variant/10">
               <div className="flex items-center justify-between mb-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Material Surface</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Poolside Application</p>
                 <Shield className="text-primary/20" size={24} />
               </div>
               <div className="aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group">
                 <img
-                  src={selected.sampleImg}
-                  alt={`${selected.name} decking material`}
+                  src={selected.installedImg}
+                  alt={`${selected.name} pool deck reference`}
                   className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                 />
               </div>
@@ -139,7 +139,7 @@ export default function DeckingShowroom() {
                 <img
                   src={selected.sampleImg}
                   alt={`${selected.name} sample`}
-                  className="w-full h-full object-cover shadow-2xl ring-1 ring-white/10"
+                  className="w-full h-full object-contain bg-white/90 p-3 shadow-2xl ring-1 ring-white/10"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
               </div>

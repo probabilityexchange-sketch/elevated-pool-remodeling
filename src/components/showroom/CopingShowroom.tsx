@@ -6,24 +6,24 @@ const copingStyles = [
   {
     name: "Bullnose Coping",
     description: "The timeless standard with a smooth, 180-degree rounded edge. Designed for comfort, safety, and a soft architectural transition between the pool and the deck.",
-    sampleImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80",
-    installedImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+    sampleImg: "https://images.pexels.com/photos/28271343/pexels-photo-28271343.jpeg?cs=srgb&dl=pexels-matreding-28271343.jpg&fm=jpg",
+    installedImg: "https://images.pexels.com/photos/28271343/pexels-photo-28271343.jpeg?cs=srgb&dl=pexels-matreding-28271343.jpg&fm=jpg",
     profile: "Rounded Radius",
     depth: "2.5 inches"
   },
   {
     name: "Modern Square Edge",
     description: "A sharp, sophisticated profile with clean 90-degree lines. This cantilevered design creates a modern frame for the pool water, perfect for contemporary architecture.",
-    sampleImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=400&q=80",
-    installedImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80",
+    sampleImg: "https://images.pexels.com/photos/24805050/pexels-photo-24805050.jpeg?cs=srgb&dl=pexels-ahmetcotur-24805050.jpg&fm=jpg",
+    installedImg: "https://images.pexels.com/photos/24805050/pexels-photo-24805050.jpeg?cs=srgb&dl=pexels-ahmetcotur-24805050.jpg&fm=jpg",
     profile: "Cantilevered Square",
     depth: "3 inches"
   },
   {
     name: "Natural Flagstone",
     description: "Hand-selected irregular stone edges that follow the natural topography of the rock. This pond-style edge is ideal for rustic, organic backyard sanctuaries.",
-    sampleImg: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80",
-    installedImg: "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80",
+    sampleImg: "https://images.pexels.com/photos/15266426/pexels-photo-15266426.jpeg?cs=srgb&dl=pexels-rafael-quaty-37077235-15266426.jpg&fm=jpg",
+    installedImg: "https://images.pexels.com/photos/15266426/pexels-photo-15266426.jpeg?cs=srgb&dl=pexels-rafael-quaty-37077235-15266426.jpg&fm=jpg",
     profile: "Natural Cleft Edge",
     depth: "Variable"
   }

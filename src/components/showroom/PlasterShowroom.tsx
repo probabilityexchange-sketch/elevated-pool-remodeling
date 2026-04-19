@@ -74,7 +74,7 @@ export default function PlasterShowroom() {
               <img
                 src={finish.img}
                 alt={finish.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-white/90 p-2"
               />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
@@ -96,7 +96,7 @@ export default function PlasterShowroom() {
               <img
                 src={selected.img}
                 alt={selected.name}
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                className="w-full h-full object-contain bg-white/90 p-6 transition-transform duration-700 hover:scale-105"
               />
             </div>
 
