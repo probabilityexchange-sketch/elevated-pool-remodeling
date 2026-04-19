@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Phone } from 'lucide-react';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -59,6 +59,17 @@ export default function ContactForm() {
               transition={{ delay: 0.2 }}
               className="space-y-8 mt-12"
             >
+              <a
+                href="tel:8173503519"
+                className="block bg-primary text-on-primary p-6 text-center hover:brightness-110 transition-all group"
+              >
+                <div className="flex items-center justify-center gap-3 mb-2">
+                  <Phone size={20} className="group-hover:scale-110 transition-transform" />
+                  <span className="font-headline text-2xl">(817) 350-3519</span>
+                </div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-80">Call for a Free Consultation</span>
+              </a>
+              
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <motion.span className="text-primary-container">
@@ -69,20 +80,6 @@ export default function ContactForm() {
                   <h3 className="font-bold text-lg mb-1">Email Us</h3>
                   <a href="mailto:Elevatedpoolremodeling@gmail.com" className="text-surface/70 hover:text-primary-container transition-colors">
                     Elevatedpoolremodeling@gmail.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <motion.span className="text-primary-container">
-                    <Send size={20} className="rotate-90" />
-                  </motion.span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                  <a href="tel:8173503519" className="text-surface/70 hover:text-primary-container transition-colors">
-                    (817) 350-3519
                   </a>
                 </div>
               </div>

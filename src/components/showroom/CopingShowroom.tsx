@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Ruler, Layers, ChevronRight, CheckCircle2, DraftingCompass } from 'lucide-react';
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { Ruler, Layers, ChevronRight, CheckCircle2, DraftingCompass } from 'lucide-react'
 
 const copingStyles = [
   {
@@ -27,10 +27,10 @@ const copingStyles = [
     profile: "Natural Cleft Edge",
     depth: "Variable"
   }
-];
+]
 
 export default function CopingShowroom() {
-  const [selected, setSelected] = useState(copingStyles[0]);
+  const [selected, setSelected] = useState(copingStyles[0])
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -87,7 +87,6 @@ export default function CopingShowroom() {
             exit={{ opacity: 0, scale: 0.98 }}
             className="sticky top-40 space-y-8"
           >
-            {/* Installed Preview */}
             <div className="bg-surface-container p-8 shadow-2xl border border-outline-variant/10 overflow-hidden">
               <div className="absolute top-0 right-0 p-8 opacity-5">
                 <Layers size={120} />
@@ -109,7 +108,6 @@ export default function CopingShowroom() {
               </div>
             </div>
 
-            {/* Material Sample */}
             <div className="bg-on-surface text-surface p-8 shadow-2xl flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-36 h-36 shrink-0 overflow-hidden ring-1 ring-white/10">
                 <img 
@@ -144,5 +142,5 @@ export default function CopingShowroom() {
         </AnimatePresence>
       </div>
     </div>
-  );
+  )
 }

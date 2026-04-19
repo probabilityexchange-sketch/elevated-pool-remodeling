@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { motion } from 'motion/react'
+import { Phone } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -51,11 +52,34 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="text-surface-container-highest text-lg md:text-xl max-w-lg leading-relaxed font-light"
+          className="text-surface-container-highest text-lg md:text-xl max-w-lg leading-relaxed font-light mb-10"
         >
           Architectural precision meets the rugged elegance of the Fort Worth landscape.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.8, duration: 0.6 }}
+          className="flex flex-col sm:flex-row items-center gap-4"
+        >
+          <a
+            href="tel:8173503519"
+            aria-label="Call Elevated Pool Remodeling at (817) 350-3519"
+            className="flex items-center gap-3 text-white hover:text-primary-container transition-colors group"
+          >
+            <Phone size={20} className="group-hover:scale-110 transition-transform" />
+            <span className="text-lg font-light tracking-wide">Call (817) 350-3519</span>
+          </a>
+          <a
+            href="#contact"
+            aria-label="Schedule a free consultation"
+            className="bg-[#455d5b] text-white px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 transition-all"
+          >
+            Schedule Consultation
+          </a>
+        </motion.div>
       </div>
     </section>
-  );
+  )
 }

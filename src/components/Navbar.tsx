@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Waves, ChevronDown, Menu, X } from 'lucide-react';
+import { Waves, ChevronDown, Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const showroomLinks = [
@@ -88,6 +88,14 @@ export default function Navbar() {
               )}
             </AnimatePresence>
           </div>
+
+          <a 
+            href="tel:8173503519"
+            className="hidden lg:flex items-center gap-2 text-[11px] font-bold tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+          >
+            <Phone size={14} />
+            (817) 350-3519
+          </a>
 
           <a 
             href={isHome ? "#contact" : "/#contact"}

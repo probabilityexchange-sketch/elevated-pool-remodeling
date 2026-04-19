@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Power, Thermometer, ShieldCheck, Cpu, Zap } from 'lucide-react';
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { Power, Thermometer, ShieldCheck, Cpu, Zap } from 'lucide-react'
 
 const equipmentOptions = [
   {
@@ -9,10 +9,10 @@ const equipmentOptions = [
     brand: "Pentair",
     name: "IntelliFlo3 VSF",
     description: "The IntelliFlo3 VSF is the gold standard of pool energy efficiency. By running at exactly the speed your pool needs, it cuts energy consumption by up to 90% compared to traditional single-speed pumps — while operating nearly silently.",
-    productImg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
+    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/pumps/intelliflo3-vsf/if3---pdp/images-/if3-pdp-thumbnail-2hps.jpg",
     installedImg: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
     features: ["IntelliFlo3 VSF Technology", "WhisperQuiet Operation", "Energy Star Certified", "Remote Speed Control"],
-    metric: { label: "Max Energy Savings", value: "90%", sublabel: "vs. single-speed pumps" }
+    metric: { label: "Max Energy Savings", value: "90%", sublabel: "vs. single-speed pumps", max: 90 }
   },
   {
     icon: Thermometer,
@@ -20,10 +20,10 @@ const equipmentOptions = [
     brand: "Pentair",
     name: "MasterTemp 400K BTU",
     description: "The MasterTemp is engineered for rapid heat recovery — bringing a 20,000-gallon pool up to temperature in a fraction of the time of competing units. Low NOx certified and designed to operate efficiently even in low-ambient temperature conditions.",
-    productImg: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?auto=format&fit=crop&w=600&q=80",
+    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/heaters/mastertemp/mastertemp-images/MasterTemp-banner.png",
     installedImg: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?auto=format&fit=crop&w=800&q=80",
     features: ["400,000 BTU Output", "Low NOx Certified", "Digital Temperature Control", "Compact Footprint"],
-    metric: { label: "Heat Output", value: "400K BTU", sublabel: "rapid recovery rate" }
+    metric: { label: "Heat Output", value: "400K", sublabel: "BTU, rapid recovery rate", max: 500 }
   },
   {
     icon: ShieldCheck,
@@ -31,10 +31,10 @@ const equipmentOptions = [
     brand: "Pentair",
     name: "IntelliChlor SC40",
     description: "Convert ordinary pool salt into pure, fresh chlorine — no harsh chemical handling, no red eyes, no bleached swimwear. The IntelliChlor SC40 self-cleaning cell produces 40 lbs of chlorine per cycle and monitors its own health automatically.",
-    productImg: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=600&q=80",
+    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-images/intellichlor-product-image.png",
     installedImg: "https://images.unsplash.com/photo-1545041361-95aef049c3b6?auto=format&fit=crop&w=800&q=80",
     features: ["Self-Cleaning Titanium Cell", "40 lbs Chlorine/Cycle", "Automated pH Monitoring", "Salt Level Detection"],
-    metric: { label: "Chlorine Output", value: "40 lbs", sublabel: "per cycle, self-cleaning" }
+    metric: { label: "Chlorine Output", value: "40", sublabel: "lbs per cycle, self-cleaning", max: 50 }
   },
   {
     icon: Cpu,
@@ -42,15 +42,15 @@ const equipmentOptions = [
     brand: "Pentair",
     name: "IntelliCenter Control",
     description: "One app controls everything — temperature, lighting, water features, sanitation schedules, and energy settings. IntelliCenter integrates with every Pentair device and supports voice commands through Alexa and Google Home.",
-    productImg: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/automation/intellicenter/intellicenter-pdp/Pentair-IntelliCenter-PDP-Images-Intro%20Image.png",
     installedImg: "https://images.unsplash.com/photo-1558002038-1ad5c2eeef6e?auto=format&fit=crop&w=800&q=80",
     features: ["Full Mobile App Control", "Voice Command Ready", "Energy Usage Dashboard", "Programmable Schedules"],
-    metric: { label: "Controllable Features", value: "Unlimited", sublabel: "lights, heat, features, schedules" }
+    metric: { label: "Controllable Features", value: "10+", sublabel: "lights, heat, features, schedules", max: 10 }
   }
-];
+]
 
 export default function EquipmentShowroom() {
-  const [selected, setSelected] = useState(equipmentOptions[0]);
+  const [selected, setSelected] = useState(equipmentOptions[0])
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -147,7 +147,19 @@ export default function EquipmentShowroom() {
                   <Zap className="text-primary" size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">{selected.metric.label}</p>
                 </div>
-                <p className="font-headline text-3xl mb-1">{selected.metric.value}</p>
+                <p className="font-headline text-3xl mb-4">{selected.metric.value}</p>
+                {selected.metric.max ? (
+                  <>
+                    <div className="h-2 w-full bg-surface-container rounded-full overflow-hidden mb-2">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${(parseInt(selected.metric.value) / selected.metric.max) * 100}%` }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                        className="h-full bg-primary"
+                      />
+                    </div>
+                  </>
+                ) : null}
                 <p className="text-[10px] text-on-surface-variant italic">{selected.metric.sublabel}</p>
               </div>
             </div>
@@ -159,5 +171,5 @@ export default function EquipmentShowroom() {
         </AnimatePresence>
       </div>
     </div>
-  );
+  )
 }

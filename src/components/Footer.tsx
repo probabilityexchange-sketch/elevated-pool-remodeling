@@ -1,4 +1,4 @@
-import { Waves } from 'lucide-react';
+import { Waves, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -16,6 +16,13 @@ export default function Footer() {
             <p className="text-on-surface-variant text-sm leading-relaxed mb-8">
               North Fort Worth's premier sanctuary remodeling specialists. We specialize in high-end pool remodeling that honors the Texas landscape.
             </p>
+            <a
+              href="tel:8173503519"
+              className="inline-flex items-center gap-3 bg-primary text-on-primary px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:brightness-110 transition-all"
+            >
+              <Phone size={14} />
+              Call (817) 350-3519
+            </a>
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24 shrink-0">

@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Sun, Thermometer, Footprints, Shield } from 'lucide-react';
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { Sun, Thermometer, Footprints, Shield } from 'lucide-react'
 
-const BRAND_LABEL = "Noble Tile Supply";
+const BRAND_LABEL = "Noble Tile Supply"
 
 const deckingOptions = [
   {
@@ -45,10 +45,10 @@ const deckingOptions = [
     thermal: "Moderate Heat Absorption",
     finish: "Natural Cleft"
   }
-];
+]
 
 export default function DeckingShowroom() {
-  const [selected, setSelected] = useState(deckingOptions[0]);
+  const [selected, setSelected] = useState(deckingOptions[0])
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -162,5 +162,5 @@ export default function DeckingShowroom() {
         </AnimatePresence>
       </div>
     </div>
-  );
+  )
 }
