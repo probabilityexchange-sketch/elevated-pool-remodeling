@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Ruler, Layers, ChevronRight, CheckCircle2, DraftingCompass } from 'lucide-react'
+import { NOBLE_TILE_URL } from './constants'
 
 const copingStyles = [
   {
@@ -93,14 +94,20 @@ export default function CopingShowroom() {
               </div>
               <div className="relative z-10">
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-6">Finished Architectural Edge</p>
-                <div className="aspect-[16/10] w-full relative overflow-hidden group shadow-xl mb-8 border border-outline-variant/10">
+                <a
+                  href={NOBLE_TILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  className="block aspect-[16/10] w-full relative overflow-hidden group shadow-xl mb-8 border border-outline-variant/10"
+                >
                   <img 
                     src={selected.installedImg} 
                     alt={`${selected.name} Installed`}
                     className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-surface-container/40 to-transparent" />
-                </div>
+                </a>
                 <h3 className="font-headline text-4xl mb-4">{selected.name}</h3>
                 <p className="text-on-surface-variant text-lg leading-relaxed">
                   {selected.description}
@@ -110,11 +117,19 @@ export default function CopingShowroom() {
 
             <div className="bg-on-surface text-surface p-8 shadow-2xl flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-36 h-36 shrink-0 overflow-hidden ring-1 ring-white/10">
-                <img 
-                  src={selected.sampleImg} 
-                  alt={`${selected.name} Sample`}
-                  className="w-full h-full object-cover"
-                />
+                <a
+                  href={NOBLE_TILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  className="block w-full h-full"
+                >
+                  <img 
+                    src={selected.sampleImg} 
+                    alt={`${selected.name} Sample`}
+                    className="w-full h-full object-cover"
+                  />
+                </a>
               </div>
               <div className="space-y-4">
                 <p className="text-primary-container text-[10px] font-bold uppercase tracking-[0.4em]">Raw Profile Detail</p>

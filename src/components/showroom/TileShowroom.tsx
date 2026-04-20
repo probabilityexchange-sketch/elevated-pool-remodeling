@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Waves, ShieldCheck, Microscope } from 'lucide-react';
+import { NOBLE_TILE_URL } from './constants';
 
 const BRAND_LABEL = "Noble Tile Supply";
 
@@ -127,23 +128,35 @@ export default function TileShowroom() {
                 <div className="grid grid-cols-2 gap-8">
                   <div className="space-y-4">
                     <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Tile Selection Board</p>
-                    <div className="aspect-square w-full overflow-hidden shadow-lg bg-white/90 p-4">
+                    <a
+                      href={NOBLE_TILE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open Noble Tile for ${selected.name}`}
+                      className="block aspect-square w-full overflow-hidden shadow-lg bg-white/90 p-4"
+                    >
                       <img
                         src={selected.sampleImg}
                         alt={`${selected.name} tile board`}
                         className="w-full h-full object-contain"
                       />
-                    </div>
+                    </a>
                   </div>
                   <div className="space-y-4">
                     <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Poolside Reference</p>
-                    <div className="aspect-square w-full overflow-hidden shadow-lg group">
+                    <a
+                      href={NOBLE_TILE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open Noble Tile for ${selected.name}`}
+                      className="block aspect-square w-full overflow-hidden shadow-lg group"
+                    >
                       <img
                         src={selected.referenceImg}
                         alt={`${selected.name} pool tile reference`}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
 

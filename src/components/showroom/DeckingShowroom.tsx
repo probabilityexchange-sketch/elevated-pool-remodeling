@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Sun, Thermometer, Footprints, Shield } from 'lucide-react'
+import { NOBLE_TILE_URL } from './constants'
 
 const BRAND_LABEL = "Noble Tile Supply"
 
@@ -120,13 +121,19 @@ export default function DeckingShowroom() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Poolside Application</p>
                 <Shield className="text-primary/20" size={24} />
               </div>
-              <div className="aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group">
+              <a
+                href={NOBLE_TILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open Noble Tile for ${selected.name}`}
+                className="block aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group"
+              >
                 <img
                   src={selected.installedImg}
                   alt={`${selected.name} pool deck reference`}
                   className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                 />
-              </div>
+              </a>
               <p className="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">{selected.category}</p>
               <h3 className="font-headline text-4xl mb-4">{selected.name}</h3>
               <p className="text-on-surface-variant text-lg leading-relaxed">
@@ -136,11 +143,19 @@ export default function DeckingShowroom() {
 
             <div className="bg-on-surface text-surface p-10 shadow-2xl flex flex-col md:flex-row gap-10 items-center">
               <div className="w-full md:w-48 h-48 shrink-0 relative">
-                <img
-                  src={selected.sampleImg}
-                  alt={`${selected.name} sample`}
-                  className="w-full h-full object-contain bg-white/90 p-3 shadow-2xl ring-1 ring-white/10"
-                />
+                <a
+                  href={NOBLE_TILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  className="block w-full h-full"
+                >
+                  <img
+                    src={selected.sampleImg}
+                    alt={`${selected.name} sample`}
+                    className="w-full h-full object-contain bg-white/90 p-3 shadow-2xl ring-1 ring-white/10"
+                  />
+                </a>
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 to-transparent pointer-events-none" />
               </div>
               <div className="space-y-6">
