@@ -63,9 +63,13 @@ export default function TileShowroom() {
         
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {tileOptions.map((tile) => (
-            <button
+            <a
               key={tile.name}
+              href={tile.productUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(tile)}
+              aria-label={`Open Noble Tile product page for ${tile.name}`}
               className={`group relative aspect-square transition-all duration-300 border-2 ${
                 selected.name === tile.name ? 'border-primary ring-2 ring-primary ring-offset-4 ring-offset-surface' : 'border-transparent hover:scale-105'
               }`}
@@ -74,7 +78,7 @@ export default function TileShowroom() {
                 <img src={tile.sampleImg} alt={tile.name} className="w-full h-full object-cover" />
               </div>
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
+            </a>
           ))}
         </div>
 

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Ruler, Layers, ChevronRight, CheckCircle2, DraftingCompass } from 'lucide-react'
-import { NOBLE_TILE_URL } from './constants'
 
 const copingStyles = [
   {
@@ -48,9 +47,13 @@ export default function CopingShowroom() {
         
         <div className="flex flex-col gap-4">
           {copingStyles.map((style, index) => (
-            <button 
+            <a 
               key={index}
+              href={style.productUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(style)}
+              aria-label={`Open Noble Tile product page for ${style.name}`}
               className={`group flex items-center gap-8 p-6 text-left transition-all duration-300 border-2 ${
                 selected.name === style.name 
                 ? 'bg-surface-container-high border-primary shadow-lg' 
@@ -67,7 +70,7 @@ export default function CopingShowroom() {
                 <h3 className="font-headline text-xl">{style.name}</h3>
               </div>
               <ChevronRight className={`transition-transform ${selected.name === style.name ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
-            </button>
+            </a>
           ))}
         </div>
 

@@ -70,9 +70,13 @@ export default function PlasterShowroom() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {plasterFinishes.map((finish) => (
-            <button
+            <a
               key={finish.name}
+              href={finish.productUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(finish)}
+              aria-label={`Open Noble Tile product page for ${finish.name}`}
               className={`group relative aspect-square transition-all duration-300 overflow-hidden ${
                 selected.name === finish.name
                   ? 'ring-2 ring-primary ring-offset-4 ring-offset-surface'
@@ -85,7 +89,7 @@ export default function PlasterShowroom() {
                 className="w-full h-full object-contain bg-white/90 p-2"
               />
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
+            </a>
           ))}
         </div>
       </div>

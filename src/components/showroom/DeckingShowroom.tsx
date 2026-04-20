@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Sun, Thermometer, Footprints, Shield } from 'lucide-react'
-import { NOBLE_TILE_URL } from './constants'
 
 const BRAND_LABEL = "Noble Tile Supply"
 
@@ -68,9 +67,13 @@ export default function DeckingShowroom() {
 
         <div className="grid grid-cols-2 gap-4">
           {deckingOptions.map((option) => (
-            <button
+            <a
               key={option.name}
+              href={option.productUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(option)}
+              aria-label={`Open Noble Tile product page for ${option.name}`}
               className={`group flex items-center gap-4 p-4 text-left transition-all duration-300 border-2 ${
                 selected.name === option.name
                   ? 'border-primary bg-surface-container-high shadow-lg'
@@ -81,7 +84,7 @@ export default function DeckingShowroom() {
                 <img src={option.sampleImg} alt={option.name} className="w-full h-full object-cover" />
               </div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em]">{option.name}</p>
-            </button>
+            </a>
           ))}
         </div>
 
@@ -125,13 +128,13 @@ export default function DeckingShowroom() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">Poolside Application</p>
                 <Shield className="text-primary/20" size={24} />
               </div>
-                <a
-                  href={selected.productUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open Noble Tile product page for ${selected.name}`}
-                  className="block aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group"
-                >
+              <a
+                href={selected.productUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open Noble Tile product page for ${selected.name}`}
+                className="block aspect-[16/10] w-full overflow-hidden mb-8 shadow-inner group"
+              >
                 <img
                   src={selected.installedImg}
                   alt={`${selected.name} pool deck reference`}

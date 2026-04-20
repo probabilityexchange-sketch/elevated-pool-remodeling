@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Power, Thermometer, ShieldCheck, Cpu, Zap } from 'lucide-react'
-import { NOBLE_TILE_URL } from './constants'
 
 const equipmentOptions = [
   {
@@ -66,9 +65,13 @@ export default function EquipmentShowroom() {
 
         <div className="flex flex-col gap-4">
           {equipmentOptions.map((item) => (
-            <button
+            <a
               key={item.name}
+              href={item.productUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setSelected(item)}
+              aria-label={`Open Noble Tile product page for ${item.name}`}
               className={`group flex items-center gap-8 p-6 text-left transition-all duration-300 border-2 ${
                 selected.name === item.name
                   ? 'bg-surface-container-high border-primary shadow-lg'
@@ -87,7 +90,7 @@ export default function EquipmentShowroom() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1">{item.brand}</p>
                 <h3 className="font-headline text-xl">{item.category}</h3>
               </div>
-            </button>
+            </a>
           ))}
         </div>
       </div>
