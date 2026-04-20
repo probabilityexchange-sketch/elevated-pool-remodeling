@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Waves, ChevronDown, Menu, X, Phone } from 'lucide-react';
+import { ChevronDown, Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import BrandMark from './BrandMark';
 
 const showroomLinks = [
   { name: 'Pool Tile', path: '/showroom/tile' },
@@ -38,10 +39,7 @@ export default function Navbar() {
     } ${!isHome ? 'bg-surface border-b border-outline-variant/10' : ''}`}>
       <nav className="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
         <Link to="/" className="flex items-center gap-2 group">
-          <Waves className="text-primary group-hover:rotate-12 transition-transform" size={28} />
-          <span className="text-xl font-headline font-black text-on-surface uppercase tracking-widest leading-none">
-            Elevated
-          </span>
+          <BrandMark />
         </Link>
         
         {/* Desktop Navigation */}

@@ -1,5 +1,6 @@
-import { Waves, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BrandMark from './BrandMark';
 
 export default function Footer() {
   return (
@@ -7,12 +8,7 @@ export default function Footer() {
       <div className="max-w-screen-2xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-16">
           <div className="max-w-sm">
-            <div className="flex items-center gap-2 mb-6">
-              <Waves className="text-primary" size={24} />
-              <span className="text-xl font-headline font-black text-on-surface uppercase tracking-widest leading-none">
-                Elevated
-              </span>
-            </div>
+            <BrandMark className="mb-6" />
             <p className="text-on-surface-variant text-sm leading-relaxed mb-8">
               North Fort Worth's premier sanctuary remodeling specialists. We specialize in high-end pool remodeling that honors the Texas landscape.
             </p>
