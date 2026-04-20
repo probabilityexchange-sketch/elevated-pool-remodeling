@@ -9,6 +9,7 @@ const copingStyles = [
     description: "The timeless standard with a smooth, 180-degree rounded edge. Designed for comfort, safety, and a soft architectural transition between the pool and the deck.",
     sampleImg: "https://images.pexels.com/photos/28271343/pexels-photo-28271343.jpeg?cs=srgb&dl=pexels-matreding-28271343.jpg&fm=jpg",
     installedImg: "https://images.pexels.com/photos/28271343/pexels-photo-28271343.jpeg?cs=srgb&dl=pexels-matreding-28271343.jpg&fm=jpg",
+    productUrl: "https://www.nobletile.com/products/hardscapes/",
     profile: "Rounded Radius",
     depth: "2.5 inches"
   },
@@ -17,6 +18,7 @@ const copingStyles = [
     description: "A sharp, sophisticated profile with clean 90-degree lines. This cantilevered design creates a modern frame for the pool water, perfect for contemporary architecture.",
     sampleImg: "https://images.pexels.com/photos/24805050/pexels-photo-24805050.jpeg?cs=srgb&dl=pexels-ahmetcotur-24805050.jpg&fm=jpg",
     installedImg: "https://images.pexels.com/photos/24805050/pexels-photo-24805050.jpeg?cs=srgb&dl=pexels-ahmetcotur-24805050.jpg&fm=jpg",
+    productUrl: "https://www.nobletile.com/products/hardscapes/",
     profile: "Cantilevered Square",
     depth: "3 inches"
   },
@@ -25,6 +27,7 @@ const copingStyles = [
     description: "Hand-selected irregular stone edges that follow the natural topography of the rock. This pond-style edge is ideal for rustic, organic backyard sanctuaries.",
     sampleImg: "https://images.pexels.com/photos/15266426/pexels-photo-15266426.jpeg?cs=srgb&dl=pexels-rafael-quaty-37077235-15266426.jpg&fm=jpg",
     installedImg: "https://images.pexels.com/photos/15266426/pexels-photo-15266426.jpeg?cs=srgb&dl=pexels-rafael-quaty-37077235-15266426.jpg&fm=jpg",
+    productUrl: "https://www.nobletile.com/products/hardscapes/natural-stone/slate/",
     profile: "Natural Cleft Edge",
     depth: "Variable"
   }
@@ -95,10 +98,10 @@ export default function CopingShowroom() {
               <div className="relative z-10">
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-6">Finished Architectural Edge</p>
                 <a
-                  href={NOBLE_TILE_URL}
+                  href={selected.productUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  aria-label={`Open Noble Tile product page for ${selected.name}`}
                   className="block aspect-[16/10] w-full relative overflow-hidden group shadow-xl mb-8 border border-outline-variant/10"
                 >
                   <img 
@@ -118,10 +121,10 @@ export default function CopingShowroom() {
             <div className="bg-on-surface text-surface p-8 shadow-2xl flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-36 h-36 shrink-0 overflow-hidden ring-1 ring-white/10">
                 <a
-                  href={NOBLE_TILE_URL}
+                  href={selected.productUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  aria-label={`Open Noble Tile product page for ${selected.name}`}
                   className="block w-full h-full"
                 >
                   <img 
