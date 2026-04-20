@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Power, Thermometer, ShieldCheck, Cpu, Zap } from 'lucide-react'
+import { NOBLE_TILE_URL } from './constants'
 
 const equipmentOptions = [
   {
@@ -108,13 +109,19 @@ export default function EquipmentShowroom() {
 
               <div className="space-y-3 mb-10">
                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Equipment</p>
-                <div className="aspect-[4/3] overflow-hidden shadow-lg group bg-white">
+                <a
+                  href={NOBLE_TILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open Noble Tile for ${selected.name}`}
+                  className="block aspect-[4/3] overflow-hidden shadow-lg group bg-white"
+                >
                   <img
                     src={selected.productImg}
                     alt={selected.name}
                     className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
-                </div>
+                </a>
               </div>
 
               <ul className="space-y-3 mb-10">

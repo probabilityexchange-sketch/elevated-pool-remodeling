@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { NOBLE_TILE_URL } from './constants';
 
 const plasterFinishes = [
   {
@@ -92,13 +93,19 @@ export default function PlasterShowroom() {
             transition={{ duration: 0.25 }}
             className="sticky top-40 bg-surface-container p-12 md:p-16 shadow-2xl overflow-hidden"
           >
-            <div className="aspect-video w-full overflow-hidden shadow-2xl mb-10">
+            <a
+              href={NOBLE_TILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open Noble Tile for ${selected.name}`}
+              className="block aspect-video w-full overflow-hidden shadow-2xl mb-10"
+            >
               <img
                 src={selected.img}
                 alt={selected.name}
                 className="w-full h-full object-contain bg-white/90 p-6 transition-transform duration-700 hover:scale-105"
               />
-            </div>
+            </a>
 
             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-2">
               {BRAND_LABEL}
