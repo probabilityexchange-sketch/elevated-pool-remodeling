@@ -67,24 +67,26 @@ export default function DeckingShowroom() {
 
         <div className="grid grid-cols-2 gap-4">
           {deckingOptions.map((option) => (
-            <a
+            <div
               key={option.name}
-              href={option.productUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setSelected(option)}
-              aria-label={`Open Noble Tile product page for ${option.name}`}
               className={`group flex items-center gap-4 p-4 text-left transition-all duration-300 border-2 ${
                 selected.name === option.name
                   ? 'border-primary bg-surface-container-high shadow-lg'
                   : 'border-outline-variant/20 hover:border-primary/50'
               }`}
             >
-              <div className="w-12 h-12 shrink-0 rounded-full overflow-hidden border border-outline-variant/30">
+              <a
+                href={option.productUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setSelected(option)}
+                aria-label={`Open Noble Tile product page for ${option.name}`}
+                className="w-12 h-12 shrink-0 rounded-full overflow-hidden border border-outline-variant/30"
+              >
                 <img src={option.sampleImg} alt={option.name} className="w-full h-full object-cover" />
-              </div>
+              </a>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em]">{option.name}</p>
-            </a>
+            </div>
           ))}
         </div>
 

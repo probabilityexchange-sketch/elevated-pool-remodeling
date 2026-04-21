@@ -65,32 +65,34 @@ export default function EquipmentShowroom() {
 
         <div className="flex flex-col gap-4">
           {equipmentOptions.map((item) => (
-            <a
+            <div
               key={item.name}
-              href={item.productUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setSelected(item)}
-              aria-label={`Open Jandy product page for ${item.name}`}
               className={`group flex items-center gap-8 p-6 text-left transition-all duration-300 border-2 ${
                 selected.name === item.name
                   ? 'bg-surface-container-high border-primary shadow-lg'
                   : 'bg-surface border-outline-variant/30 hover:border-primary/50'
               }`}
             >
-              <div className={`p-4 shrink-0 transition-colors ${
-                selected.name === item.name ? 'bg-primary/10' : 'bg-surface-container'
-              }`}>
+              <a
+                href={item.productUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setSelected(item)}
+                aria-label={`Open Jandy product page for ${item.name}`}
+                className={`p-4 shrink-0 transition-colors ${
+                  selected.name === item.name ? 'bg-primary/10' : 'bg-surface-container'
+                }`}
+              >
                 <item.icon
                   className={`transition-colors ${selected.name === item.name ? 'text-primary' : 'text-on-surface-variant'}`}
                   size={24}
                 />
-              </div>
+              </a>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1">{item.brand}</p>
                 <h3 className="font-headline text-xl">{item.category}</h3>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

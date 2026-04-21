@@ -47,30 +47,30 @@ export default function CopingShowroom() {
         
         <div className="flex flex-col gap-4">
           {copingStyles.map((style, index) => (
-            <a 
+            <div
               key={index}
-              href={style.productUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setSelected(style)}
-              aria-label={`Open Noble Tile product page for ${style.name}`}
               className={`group flex items-center gap-8 p-6 text-left transition-all duration-300 border-2 ${
-                selected.name === style.name 
-                ? 'bg-surface-container-high border-primary shadow-lg' 
+                selected.name === style.name
+                ? 'bg-surface-container-high border-primary shadow-lg'
                 : 'bg-surface border-outline-variant/30 hover:border-primary/50'
               }`}
             >
-              <div 
+              <a
+                href={style.productUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setSelected(style)}
+                aria-label={`Open Noble Tile product page for ${style.name}`}
                 className="w-20 h-20 shrink-0 shadow-inner overflow-hidden border border-outline-variant/20"
               >
                 <img src={style.sampleImg} alt={style.name} className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all" />
-              </div>
+              </a>
               <div className="flex-grow">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-1">Profile {index + 1}</p>
                 <h3 className="font-headline text-xl">{style.name}</h3>
               </div>
               <ChevronRight className={`transition-transform ${selected.name === style.name ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
-            </a>
+            </div>
           ))}
         </div>
 
