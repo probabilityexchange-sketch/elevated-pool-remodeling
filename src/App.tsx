@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'r
 import { useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import Home from './pages/Home'
+import PortfolioPage from './pages/PortfolioPage'
 import LocationPage from './pages/LocationPage'
 import ShowroomLayout from './components/showroom/ShowroomLayout'
 import TileShowroom from './components/showroom/TileShowroom'
@@ -27,6 +28,7 @@ export default function App() {
         <div className="min-h-screen flex flex-col bg-surface">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/pool-remodeling/:suburb" element={<LocationPage />} />
             <Route path="/showroom" element={<ShowroomLayout />}>
               <Route index element={<Navigate to="tile" replace />} />

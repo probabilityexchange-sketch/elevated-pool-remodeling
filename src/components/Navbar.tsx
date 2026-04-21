@@ -28,7 +28,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Portfolio', href: isHome ? '#portfolio' : '/#portfolio' },
+    { name: 'Portfolio', to: '/portfolio' },
     { name: 'Process', href: isHome ? '#process' : '/#process' },
     { name: 'Reviews', href: isHome ? '#testimonials' : '/#testimonials' },
   ];
@@ -45,13 +45,23 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 lg:gap-10">
           {navLinks.map((item) => (
-            <a 
-              key={item.name} 
-              href={item.href}
-              className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-            >
-              {item.name}
-            </a>
+            item.to ? (
+              <Link
+                key={item.name}
+                to={item.to}
+                className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+              >
+                {item.name}
+              </a>
+            )
           ))}
           
           {/* Showroom Dropdown */}
@@ -126,14 +136,25 @@ export default function Navbar() {
           >
             <div className="flex flex-col p-6 gap-6">
               {navLinks.map((item) => (
-                <a 
-                  key={item.name} 
-                  href={item.href}
-                  className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.to ? (
+                  <Link
+                    key={item.name}
+                    to={item.to}
+                    className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-xs font-bold uppercase tracking-widest text-on-surface-variant"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="h-px bg-outline-variant/20" />
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">Our Showroom</p>

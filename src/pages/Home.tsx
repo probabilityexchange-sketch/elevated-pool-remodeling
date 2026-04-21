@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
-import Portfolio from '../components/Portfolio';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import ServiceAreas from '../components/ServiceAreas';
@@ -16,7 +15,6 @@ export default function Home() {
       <main className="flex-grow pt-24 md:pt-0">
         <Hero />
         <Features />
-        <Portfolio />
         <Process />
         <Testimonials />
         <ServiceAreas />

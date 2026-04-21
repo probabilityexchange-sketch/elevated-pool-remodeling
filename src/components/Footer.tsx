@@ -27,9 +27,15 @@ export default function Footer() {
               <ul className="space-y-4">
                 {['Portfolio', 'Process', 'Reviews', 'FAQ'].map(item => (
                   <li key={item}>
-                    <a href={item === 'FAQ' ? '#faq' : `/#${item.toLowerCase()}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
-                      {item}
-                    </a>
+                    {item === 'Portfolio' ? (
+                      <Link to="/portfolio" className="text-sm text-on-surface-variant hover:text-primary transition-colors">
+                        {item}
+                      </Link>
+                    ) : (
+                      <a href={item === 'FAQ' ? '#faq' : `/#${item.toLowerCase()}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
+                        {item}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
