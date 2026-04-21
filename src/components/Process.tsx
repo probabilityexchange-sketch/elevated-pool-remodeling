@@ -3,23 +3,33 @@ import { motion } from 'motion/react';
 const steps = [
   {
     number: "01",
-    title: "Consultation & Vision",
-    description: "We begin with an on-site evaluation of your landscape's unique topography and your personal aesthetic goals."
+    title: "Set the Meeting",
+    description: "We start by scheduling the initial conversation so we can understand the remodel scope, timing, and desired outcome."
   },
   {
     number: "02",
-    title: "Architectural Design",
-    description: "Our designers design a 3D blueprint for your remodel that harmonizes modern structural lines with the natural Texas environment."
+    title: "Measure & Discuss Needs",
+    description: "We take measurements, inspect the existing pool, and discuss exactly what the client wants changed, repaired, or upgraded."
   },
   {
     number: "03",
-    title: "Structural Engineering",
-    description: "We reinforce every basin and feature with precision engineering to ensure your sanctuary lasts for generations."
+    title: "Provide the Estimate",
+    description: "We prepare a remodel estimate based on the existing pool, requested selections, and any scope notes captured during the visit."
   },
   {
     number: "04",
-    title: "Master Craftsmanship",
-    description: "Our specialized masons execute the vision using hand-selected limestone and premium finishes."
+    title: "Get on the Schedule",
+    description: "Once the estimate is approved, we lock in the project timeline and line up the crews and materials needed for the remodel."
+  },
+  {
+    number: "05",
+    title: "Project Execution",
+    description: "A project manager oversees the remodel while masons and crews handle demolition, installation, and finish work."
+  },
+  {
+    number: "06",
+    title: "Final Walkthrough",
+    description: "We review the completed remodel with the client, confirm the details, and close out any final punch-list items."
   }
 ];
 
@@ -43,15 +53,15 @@ export default function Process() {
               viewport={{ once: true }}
               className="font-headline text-4xl md:text-5xl text-on-surface editorial-scale"
             >
-              Our Architectural Process
+              Our Pool Remodel Process
             </motion.h2>
           </div>
           <p className="text-on-surface-variant max-w-sm leading-relaxed">
-            From the first sketch to the final stone placement, we maintain a standard of excellence that is unmatched in North Fort Worth.
+            This workflow is built for pool remodels only, from first contact through final walkthrough. It does not describe new pool construction.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <motion.div 
               key={index}

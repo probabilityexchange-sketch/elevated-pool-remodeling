@@ -121,7 +121,7 @@ export default function LocationPage() {
 
   const relatedLocations = getRelatedLocations(suburb!, 6);
   const pageTitle = `Pool Remodeling in ${location.name}, TX - Elevated Pool`;
-  const pageDescription = `Premium pool remodeling services in ${location.name}, TX. Custom designs, Noble Tile, Pentair equipment. Serving ${location.county} County.`;
+  const pageDescription = `Premium pool remodeling services in ${location.name}, TX. Custom designs, Noble Tile, Jandy equipment. Serving ${location.county} County.`;
 
   return (
     <>

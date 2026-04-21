@@ -37,7 +37,7 @@ export const LOCATIONS: Location[] = [
     lng: -96.6989,
     population: 285000,
     medianHomeValue: 465900,
-    serviceDescription: "Plano's luxury neighborhoods deserve exceptional pools. We deliver custom remodeling projects with architect-grade finishes, Pentair automation systems, and premium Noble Tile collections.",
+    serviceDescription: "Plano's luxury neighborhoods deserve exceptional pools. We deliver custom remodeling projects with architect-grade finishes, Jandy automation systems, and premium Noble Tile collections.",
     testimonialCity: "Plano",
     contactCTA: "Schedule Your Plano Pool Design Consultation"
   },

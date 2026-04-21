@@ -6,45 +6,45 @@ const equipmentOptions = [
   {
     icon: Power,
     category: "Variable Speed Pump",
-    brand: "Pentair",
-    name: "IntelliFlo3 VSF",
-    description: "The IntelliFlo3 VSF is the gold standard of pool energy efficiency. By running at exactly the speed your pool needs, it cuts energy consumption by up to 90% compared to traditional single-speed pumps — while operating nearly silently.",
-    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/pumps/intelliflo3-vsf/if3---pdp/images-/if3-pdp-thumbnail-2hps.jpg",
-    productUrl: "https://www.nobletile.com/products/",
-    features: ["IntelliFlo3 VSF Technology", "WhisperQuiet Operation", "Energy Star Certified", "Remote Speed Control"],
+    brand: "Jandy",
+    name: "ePump 3.8 HP",
+    description: "The Jandy ePump is a high-performance, energy-efficient variable-speed pump built for quiet operation and large-pool demand. It gives remodel clients a clean upgrade path for modern circulation and automation.",
+    productImg: "https://cdn.fluidrausa.com/-/media/media-database/products/pumps/epump-38hp/without-speedset/17epump220270380.png?rev=87e2277657ab483c97fc97404cc98295",
+    productUrl: "https://www.jandy.com/en/products/pool-pumps/variable-speed/epump-38hp-2a",
+    features: ["Variable-Speed Control", "Quiet Pump Technology", "Large-Capacity Basket", "Automation Ready"],
     metric: { label: "Max Energy Savings", value: "90%", sublabel: "vs. single-speed pumps", max: 90 }
   },
   {
     icon: Thermometer,
     category: "Gas Heater",
-    brand: "Pentair",
-    name: "MasterTemp 400K BTU",
-    description: "The MasterTemp is engineered for rapid heat recovery — bringing a 20,000-gallon pool up to temperature in a fraction of the time of competing units. Low NOx certified and designed to operate efficiently even in low-ambient temperature conditions.",
-    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/heaters/mastertemp/mastertemp-images/MasterTemp-banner.png",
-    productUrl: "https://www.nobletile.com/products/",
-    features: ["400,000 BTU Output", "Low NOx Certified", "Digital Temperature Control", "Compact Footprint"],
+    brand: "Jandy",
+    name: "JXiQ 400NK",
+    description: "The JXiQ gas pool and spa heater is built for efficient operation and straightforward installation. It fits remodel projects that need a modern heater upgrade without wasting space on the equipment pad.",
+    productImg: "https://cdn.fluidrausa.com/-/media/media-database/products/heaters/jxi/jxi_jxi_1.png?rev=21664298c95a4b0984228dc0d8371679",
+    productUrl: "https://www.jandy.com/en/products/pool-heating",
+    features: ["Gas Pool & Spa Heating", "SMART Sensors", "Compact Footprint", "Installation Friendly"],
     metric: { label: "Heat Output", value: "400K", sublabel: "BTU, rapid recovery rate", max: 500 }
   },
   {
     icon: ShieldCheck,
     category: "Salt Chlorination",
-    brand: "Pentair",
-    name: "IntelliChlor SC40",
-    description: "Convert ordinary pool salt into pure, fresh chlorine — no harsh chemical handling, no red eyes, no bleached swimwear. The IntelliChlor SC40 self-cleaning cell produces 40 lbs of chlorine per cycle and monitors its own health automatically.",
-    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-images/intellichlor-product-image.png",
-    productUrl: "https://www.nobletile.com/products/",
-    features: ["Self-Cleaning Titanium Cell", "40 lbs Chlorine/Cycle", "Automated pH Monitoring", "Salt Level Detection"],
+    brand: "Jandy",
+    name: "TruClear XL",
+    description: "The Jandy TruClear XL salt chlorinator is designed for large in-ground pools and easy app-based control. It provides a simple, reliable upgrade for remodels that want better water care with less hands-on maintenance.",
+    productImg: "https://cdn.fluidrausa.com/-/media/media-database/products/water-sanitizers/truclear-xl/29_truclear_xl_tag.png?h=1500&iar=0&rev=150ee49ec00f49afb112f334c7453f78&w=1500",
+    productUrl: "https://www.jandy.com/en/products/water-care/salt-chlorinators/truclear-xl",
+    features: ["Saltwater Chlorination", "App-Based Control", "Low Maintenance Cell", "Large Pool Capacity"],
     metric: { label: "Chlorine Output", value: "40", sublabel: "lbs per cycle, self-cleaning", max: 50 }
   },
   {
     icon: Cpu,
     category: "Automation System",
-    brand: "Pentair",
-    name: "IntelliCenter Control",
-    description: "One app controls everything — temperature, lighting, water features, sanitation schedules, and energy settings. IntelliCenter integrates with every Pentair device and supports voice commands through Alexa and Google Home.",
-    productImg: "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/automation/intellicenter/intellicenter-pdp/Pentair-IntelliCenter-PDP-Images-Intro%20Image.png",
-    productUrl: "https://www.nobletile.com/products/",
-    features: ["Full Mobile App Control", "Voice Command Ready", "Energy Usage Dashboard", "Programmable Schedules"],
+    brand: "Jandy",
+    name: "AquaLink RS",
+    description: "AquaLink RS gives remodel clients one place to control pool functions, lighting, water features, schedules, and automation. It is the cleanest way to modernize an existing pool pad without framing the project like a new build.",
+    productImg: "https://cdn.fluidrausa.com/-/media/website-assets/jandy/rectangular-images/jandy_automationclp_herobannermobile_750x422.jpg?h=422&iar=0&rev=aa30e303bc034bc1a730a38974b0195b&w=750",
+    productUrl: "https://www.jandy.com/en/products/pool-automation",
+    features: ["Pool & Spa Automation", "iAquaLink Control", "Schedules and Macros", "Smart Home Ready"],
     metric: { label: "Controllable Features", value: "10+", sublabel: "lights, heat, features, schedules", max: 10 }
   }
 ]
@@ -56,10 +56,10 @@ export default function EquipmentShowroom() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
       <div className="space-y-12">
         <div className="max-w-md">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-3">Pentair · Certified Installer</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-3">Jandy · Certified Installer</p>
           <h2 className="font-headline text-3xl mb-4 text-on-surface">Pool Equipment</h2>
           <p className="text-on-surface-variant leading-relaxed">
-            The equipment pad is the engine room of your pool. We install and configure industry-leading Pentair systems built for Texas climate demands and long-term reliability.
+            The equipment pad is the engine room of your pool. We install and configure industry-leading Jandy systems built for Texas climate demands and long-term reliability.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function EquipmentShowroom() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setSelected(item)}
-              aria-label={`Open Noble Tile product page for ${item.name}`}
+              aria-label={`Open Jandy product page for ${item.name}`}
               className={`group flex items-center gap-8 p-6 text-left transition-all duration-300 border-2 ${
                 selected.name === item.name
                   ? 'bg-surface-container-high border-primary shadow-lg'
@@ -120,7 +120,7 @@ export default function EquipmentShowroom() {
                   href={selected.productUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Open Noble Tile product page for ${selected.name}`}
+                  aria-label={`Open Jandy product page for ${selected.name}`}
                   className="block aspect-[4/3] overflow-hidden shadow-lg group bg-white"
                 >
                   <img
