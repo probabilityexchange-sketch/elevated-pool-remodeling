@@ -28,9 +28,12 @@ const portfolioPhotos: PortfolioPhoto[] = Object.entries(photoModules)
   })
   .sort((a, b) => b.filename.localeCompare(a.filename));
 
-const years = [...new Set(portfolioPhotos.map((photo) => photo.year))].sort((a, b) => b - a);
+const featuredPhoto = portfolioPhotos.find((photo) => photo.filename.toLowerCase() === 'main photo.jpg')
+  ?? portfolioPhotos[0];
 
-const featuredPhoto = portfolioPhotos[0];
+const galleryPhotos = portfolioPhotos.filter((photo) => photo.filename !== featuredPhoto?.filename);
+
+const years = [...new Set(portfolioPhotos.map((photo) => photo.year))].sort((a, b) => b - a);
 
 function formatYearCount(year: number) {
   const count = portfolioPhotos.filter((photo) => photo.year === year).length;
@@ -102,7 +105,7 @@ export default function Portfolio() {
                 <div className="grid grid-cols-2 gap-4 text-[10px] font-bold uppercase tracking-widest">
                   <div className="bg-surface p-4 border border-outline-variant/20">
                     <div className="text-primary mb-1">Total Images</div>
-                    <div>{portfolioPhotos.length}</div>
+                    <div>{galleryPhotos.length + (featuredPhoto ? 1 : 0)}</div>
                   </div>
                   <div className="bg-surface p-4 border border-outline-variant/20">
                     <div className="text-primary mb-1">Year Range</div>
@@ -143,7 +146,9 @@ export default function Portfolio() {
                 </div>
 
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
-                  {photosForYear.map((photo) => (
+                  {photosForYear
+                    .filter((photo) => photo.filename !== featuredPhoto?.filename)
+                    .map((photo) => (
                     <motion.figure
                       key={photo.filename}
                       whileHover={{ y: -4 }}
