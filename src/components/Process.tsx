@@ -57,7 +57,7 @@ export default function Process() {
             </motion.h2>
           </div>
           <p className="text-on-surface-variant max-w-sm leading-relaxed">
-            This workflow is built for pool remodels only, from first contact through final walkthrough. It does not describe new pool construction.
+            This process is tailored to existing pool remodels, from the first meeting through the final walkthrough.
           </p>
         </div>
 
